@@ -2,6 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url('img/bg4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 header {
@@ -67,22 +72,23 @@ header {
     display: block;
 }
 
-
 .container {
-    padding: 20px;
+    padding: 20px 50px 20px 50px;
+    background-color: ghostwhite;
     margin: 20px;
     border-radius: 10px;
-    text-align: center;
 }
+.container h3{
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: 3px black solid;
 
-.container h1, .container h2 {
-    font-size: 2.5em;
-    margin: 20px 0;
 }
 
 .container p {
-    font-size: 1.2em;
+    font-size: 1em;
     margin: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 2em;
 }
 
 .container img {
@@ -90,38 +96,15 @@ header {
     border-radius: 10px;
 }
 
-.container h1,h2{
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif ;
-    margin-top: 10px;
-    animation: fadeIn 2s ease-in-out;
-    text-align: left;
-    margin-left: 10px;
-    border-bottom: 3px #000 solid;
-   border-radius: 1px;
-    animation: borderAnimation 4s infinite;
-}
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.who p{
-    font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 10px 10px 10px 10px;
-    text-align: justify;
-    line-height: 2em;
-    animation: fadeIn 2s ease-in-out;
-}
-
-.content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.text-section {
-    flex: 1;
-    min-width: 300px;
-    padding: 20px;
+    .navbar a {
+        padding: 10px 15px;
+    }
 }
 
 .image-section {
@@ -136,84 +119,71 @@ header {
     height: auto;
     border-radius: 10px;
     animation: slideInLeft 4s ease-out;
+    align-items: end;
+    opacity: 0;
+    animation: fadeIn 3s forwards ;
+    box-shadow: 0 0 5px red,
+    0 0 25px red;
 }
 
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
+.text-section {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
 .text-section p{
-    font-size: 20px;
+    font-size: 18px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 10px 10px 10px 10px;
-    text-align: justify;
+    text-align: left;
     line-height: 2em;
     
 }
 
-.content-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin: 20px 0;
-    animation: zoomIn 5s infinite alternate;
-}
-
-@keyframes zoomIn {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.1);
-    }
-}
-
-@keyframes slideInLeft {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-
-
-@keyframes borderAnimation {
-    0% {
-        border-color: transparent;
-    }
-    25% {
-        border-color: #000;
-    }
-    50% {
-        border-color: #000;
-    }
-    75% {
-        border-color: #000;
-    }
-    100% {
-        border-color: transparent;
-    }
-}
-
-
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
     to {
         opacity: 1;
     }
 }
-@media screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .navbar a {
-        padding: 10px 15px;
-    }
+.services {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.service-item {
+    text-align: center;
+    margin: 10px;
+}
+
+.service-item img {
+    width: 350px;
+    border-radius: 10px;
+    filter: grayscale(100%);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.service-item img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.service-item h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
 }
 
 .Connect{
@@ -221,6 +191,7 @@ header {
     color: white;
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
+    text-align: center;
 }
 
 footer {

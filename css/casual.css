@@ -67,143 +67,83 @@ header {
     display: block;
 }
 
-
-.container {
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    text-align: center;
+.casual{
+ 
+    margin: 10px 10px 10px 10px;
+    padding: 10px 30px 10px 30px;
+    background-color: aliceblue;
 }
 
-.container h1, .container h2 {
-    font-size: 2.5em;
-    margin: 20px 0;
-}
-
-.container p {
-    font-size: 1.2em;
-    margin: 20px 0;
-}
-
-.container img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-.container h1,h2{
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif ;
+.casual h2{
+       
+      text-align: left;
+      border-bottom: 1px black solid;
+      font-family: 'Times New Roman', Times, serif ;
     margin-top: 10px;
-    animation: fadeIn 2s ease-in-out;
-    text-align: left;
-    margin-left: 10px;
-    border-bottom: 3px #000 solid;
-   border-radius: 1px;
     animation: borderAnimation 4s infinite;
 }
 
-.who p{
-    font-size: 20px;
+.casual p{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 10px 10px 10px 10px;
-    text-align: justify;
     line-height: 2em;
-    animation: fadeIn 2s ease-in-out;
+}
+.party{
+    margin: 10px 10px 10px 10px;
+   display: flex;
+   min-width: 300px;
 }
 
-.content {
+.party .text{
+    padding: 20px 20px 20px 20px;
+    width: 50%;
+
+}
+.party .image{
+    width: 50%;
+    align-content: end;
+}
+
+.image img{
+    width: 100%;
+}
+
+.text p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    line-height: 2em;
+}
+
+.services {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.text-section {
-    flex: 1;
-    min-width: 300px;
-    padding: 20px;
-}
-
-.image-section {
-    flex: 1;
-    min-width: 300px;
-    padding: 20px;
-    text-align: center;
-}
-
-.image-section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    animation: slideInLeft 4s ease-out;
-}
-
-
-.text-section p{
-    font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 10px 10px 10px 10px;
-    text-align: justify;
-    line-height: 2em;
-    
-}
-
-.content-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
     margin: 20px 0;
-    animation: zoomIn 5s infinite alternate;
+    padding: 20px;
+    background-color: #f9f9f9;
 }
 
-@keyframes zoomIn {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.1);
-    }
+.service-item {
+    text-align: center;
+    margin: 10px;
 }
 
-@keyframes slideInLeft {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
+.service-item img {
+    width: 450px;
+    border-radius: 10px;
+    filter: grayscale(100%);
+    transition: transform 0.3s ease, filter 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
-
-
-@keyframes borderAnimation {
-    0% {
-        border-color: transparent;
-    }
-    25% {
-        border-color: #000;
-    }
-    50% {
-        border-color: #000;
-    }
-    75% {
-        border-color: #000;
-    }
-    100% {
-        border-color: transparent;
-    }
+.service-item img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
 }
 
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+.service-item h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
 }
 @media screen and (max-width: 768px) {
     .navbar {
@@ -215,12 +155,12 @@ header {
         padding: 10px 15px;
     }
 }
-
 .Connect{
     background-color: #000;
     color: white;
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
+    text-align: center;
 }
 
 footer {
