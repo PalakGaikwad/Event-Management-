@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="css/bts.css">
+</head>
+<body>
+
+
+    <header>
+        <nav>
+        <img class="logo" src="img/about-img/logo_v2.jpeg" width="190px" height="100px">
+            <ul class="navbar">
+    <!---------------------------------------HOME PAGE------------------------------------------------------------>
+                <li><a href="index.html">Home</a></li>
+    <!---------------------------------------ABOUT US PAGE------------------------------------------------------------>
+                <li class="dropdown">
+                    <a href="about.html">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="wedding.html">Weddings</a></li>
+                        <li><a href="corporate.html">Corporate Events</a></li>
+                        <li><a href="casual.html">Casual Parties</a></li>
+                    </ul>
+                </li>
+    <!---------------------------------------SERVICES PAGE------------------------------------------------------------>
+                <li class="dropdown">
+                    <a href="services.html">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Party Planning</a></li>
+                        <li><a href="#">Venue Maanagement</a></li>
+                        <li><a href="#">Bar Services</a></li>
+                        <li><a href="#">Video production</a></li>
+                        <li><a href="#">Virtual Events</a></li>
+                        <li><a href="#">Event-artist Management</a></li>
+                    </ul>
+                </li>
+    <!---------------------------------------EVENTS PAGE------------------------------------------------------------>
+                <li class="dropdown">
+                    <a href="past.html">Events</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="past.html">Our Past Events</a></li>
+                        <li><a href="portfolio.html">Portfolio of Pictures</a></li>
+                        <li><a href="npce.html">Non profit and charity Events</a></li>
+                    </ul>
+                </li>
+    <!---------------------------------------OUR TEAM PAGE------------------------------------------------------------>
+                <li class="dropdown">
+                    <a href="teams.html">Our Team</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="teams.html">Portfolio</a></li>
+                        <li><a href="bts.html">Behind the Scenes</a></li>
+                    </ul>
+                </li>
+    <!---------------------------------------EVENTS CALENDER PAGE------------------------------------------------------------>
+                <li class="dropdown">
+                    <a href="event1.html">Events Calendar</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="event1.html">January + february</a></li>
+                        <li><a href="event2.html">March + April</a></li>
+                        <li><a href="event3.html">May + June</a></li>
+                        <li><a href="event4.html">July + August</a></li>
+                        <li><a href="event5.html">September + October</a></li>
+                        <li><a href="event6.html">Novermber + December</a></li>
+                    </ul>
+                </li>
+    <!---------------------------------------FAQs PAGE------------------------------------------------------------>
+                <li class="dropdown">
+                    <a href="contact.html">Contact Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                    </ul>
+                </li>
+            </nav>
+    </header>
+
+
+    
+   
+        <div class="gallery">
+            
+            <img src="img/teams-img/img1.jpeg" alt="Image 1" class="gallery-img">
+            <img src="img/teams-img/img2.png" alt="Image 2" class="gallery-img">
+            <img src="img/teams-img/img333.jpg" alt="Image 3" class="gallery-img">
+            <img src="img/teams-img/img4.jpg" alt="Image 4" class="gallery-img">
+            <img src="img/teams-img/img5.jpg" alt="Image 5" class="gallery-img">
+            <img src="img/teams-img/img8.jpg" alt="Image 6" class="gallery-img">
+            <img src="img/teams-img/img15.jpg" alt="Image 6" class="gallery-img">
+            <img src="img/teams-img/img10.jpg" alt="Image 6" class="gallery-img">
+            <img src="img/teams-img/img11.jpg" alt="Image 6" class="gallery-img">
+            <img src="img/teams-img/img16.jpg" alt="Image 6" class="gallery-img">
+            <img src="img/teams-img/img13.jpg" alt="Image 6" class="gallery-img">
+            <img src="img/teams-img/img12.jpg" alt="Image 6" class="gallery-img">
+            <img src="img/teams-img/img14.jpg" alt="Image 6" class="gallery-img">
+            <img src="img/teams-img/img18.jpg" alt="Image 6" class="gallery-img">
+            <img src="img/teams-img/img21.jpg" alt="Image 6" class="gallery-img">
+            <img src="img/teams-img/img19.jpg" alt="Image 6" class="gallery-img">
+            <img src="img/teams-img/img20.jpg" alt="Image 6" class="gallery-img">
+            <img src="img/teams-img/img17.jpg" alt="Image 6" class="gallery-img">
+           
+            
+            
+        </div>
+        <div class="lightbox" id="lightbox">
+            <span class="close">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+        </div>
+        
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    const galleryImages = document.querySelectorAll(".gallery-img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const close = document.querySelector(".close");
+    const prev = document.querySelector(".prev");
+    const next = document.querySelector(".next");
+    let currentIndex;
+
+    galleryImages.forEach((image, index) => {
+        image.addEventListener("click", function() {
+            currentIndex = index;
+            lightbox.style.display = "flex";
+            lightboxImg.src = this.src;
+        });
+    });
+
+    close.addEventListener("click", function() {
+        lightbox.style.display = "none";
+    });
+
+    lightbox.addEventListener("click", function(event) {
+        if (event.target !== lightboxImg && event.target !== prev && event.target !== next) {
+            lightbox.style.display = "none";
+        }
+    });
+
+    function showImage(index) {
+        if (index < 0) {
+            index = galleryImages.length - 1;
+        } else if (index >= galleryImages.length) {
+            index = 0;
+        }
+        lightboxImg.src = galleryImages[index].src;
+        currentIndex = index;
+    }
+
+    prev.addEventListener("click", function() {
+        showImage(currentIndex - 1);
+    });
+
+    next.addEventListener("click", function() {
+        showImage(currentIndex + 1);
+    });
+});
+
+</script>
+   
+</body>
+</html>

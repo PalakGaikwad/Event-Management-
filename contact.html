@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+        <img class="logo" src="img/about-img/logo_v2.jpeg" width="190px" height="100px">
+            <ul class="navbar">
+    <!---------------------------------------HOME PAGE------------------------------------------------------------>
+                <li><a href="index.html">Home</a></li>
+    <!---------------------------------------ABOUT US PAGE------------------------------------------------------------>
+                <li class="dropdown">
+                    <a href="about.html">About Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="wedding.html">Weddings</a></li>
+                        <li><a href="corporate.html">Corporate Events</a></li>
+                        <li><a href="casual.html">Casual Parties</a></li>
+                    </ul>
+                </li>
+    <!---------------------------------------SERVICES PAGE------------------------------------------------------------>
+                <li class="dropdown">
+                    <a href="services.html">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Party Planning</a></li>
+                        <li><a href="#">Venue Maanagement</a></li>
+                        <li><a href="#">Bar Services</a></li>
+                        <li><a href="#">Video production</a></li>
+                        <li><a href="#">Virtual Events</a></li>
+                        <li><a href="#">Event-artist Management</a></li>
+                    </ul>
+                </li>
+    <!---------------------------------------EVENTS PAGE------------------------------------------------------------>
+                <li class="dropdown">
+                    <a href="past.html">Events</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="past.html">Our Past Events</a></li>
+                        <li><a href="portfolio.html">Portfolio of Pictures</a></li>
+                        <li><a href="npce.html">Non profit and charity Events</a></li>
+                    </ul>
+                </li>
+    <!---------------------------------------OUR TEAM PAGE------------------------------------------------------------>
+                <li class="dropdown">
+                    <a href="teams.html">Our Team</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="teams.html">Portfolio</a></li>
+                        <li><a href="bts.html">Behind the Scenes</a></li>
+                    </ul>
+                </li>
+    <!---------------------------------------EVENTS CALENDER PAGE------------------------------------------------------------>
+                <li class="dropdown">
+                    <a href="event1.html">Events Calendar</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="event1.html">January + february</a></li>
+                        <li><a href="event2.html">March + April</a></li>
+                        <li><a href="event3.html">May + June</a></li>
+                        <li><a href="event4.html">July + August</a></li>
+                        <li><a href="event5.html">September + October</a></li>
+                        <li><a href="event6.html">Novermber + December</a></li>
+                    </ul>
+                </li>
+    <!---------------------------------------FAQs PAGE------------------------------------------------------------>
+                <li class="dropdown">
+                    <a href="contact.html">Contact Us</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
+                    </ul>
+                </li>
+            </nav>
+    </header>
+
+    <section class="contact">
+        <div class="content">
+            <h1>Contact Us</h1>
+            <p><b>Confirm your bookings now for the event of your dreams to come true!</b></p>
+        </div>
+        
+        <div class="container">
+            <div class="contactinfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>Building no. 5, near Garve lawns,<br>
+                            Pimple Gurav, Pune - 61</p>
+                    </div>
+                </div>
+                <div class="contactmap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.326918275977!2d73.81613047415445!3d18.604359866611492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b99b55fc447b%3A0x57d1c10f9d894b03!2sGarve%20Lawns!5e0!3m2!1sen!2sin!4v1719544753723!5m2!1sen!2sin" 
+                    width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                
+                <div class="box">
+                    <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>+91-8912125454</p>
+                        <p>+91-9374923651</p>
+                        <p>+91-9834521356</p>
+                    </div>
+                </div>
+                
+                <div class="box">
+                    <div class="icon"><i class="fa fa-fax" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>velvetvenues@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contactform">
+                <form id="contactForm">
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <span>Full Name</span>
+                        <input type="text" name="" required="required" id="fname" onchange="validateFirstName()">
+                        <span id="fname-error" class="error-message"></span>
+                        <span class="hint">Only letters and spaces are allowed.</span>
+                    </div>
+                    <div class="inputBox">
+                        <span>Email</span>
+                        <input type="text" name="" required="required" id="email" onchange="validateEmail()">
+                        <span id="email-error" class="error-message"></span>
+                    </div>
+                    <div class="inputBox">
+                        <span>Type of event</span>
+                        <input type="text" name="" required="required" id="event">
+                    </div>
+                    <div class="inputBox">
+                        <span>Date of schedule</span>
+                        <input type="date" name="" required="required" id="date">
+                        <span class="hint">Format: YYYY-MM-DD</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" name="" value="Send" id="send" onclick="validateForm(event)">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Terms and Conditions Popup -->
+        <div id="termsPopup" class="popup">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <h2>Terms and Conditions</h2>
+                <p>1. Introduction
+
+                    Welcome to Velvet Venue! These terms and conditions outline the rules and regulations for the use of Velvet Venue's Website, located at [Your Website URL]. By accessing this website, we assume you accept these terms and conditions. Do not continue to use Velvet Venue if you do not agree to all of the terms and conditions stated on this page.<br><br>
+                    
+                    2. Cookies
+                    
+                    We employ the use of cookies. By accessing Velvet Venue, you agreed to use cookies in agreement with the Velvet Venue's Privacy Policy.<br><br>
+                    
+                    3. License
+                    
+                    Unless otherwise stated, Velvet Venue and/or its licensors own the intellectual property rights for all material on Velvet Venue. All intellectual property rights are reserved. You may access this from Velvet Venue for your own personal use subjected to restrictions set in these terms and conditions.
+                    
+                    <br>You must not:
+                    
+                    Republish material from Velvet Venue
+                    Sell, rent, or sub-license material from Velvet Venue
+                    Reproduce, duplicate, or copy material from Velvet Venue
+                    Redistribute content from Velvet Venue. <br><br>
+                    4. User Comments
+                    
+                    This Agreement shall begin on the date hereof.
+                    Certain parts of this website offer the opportunity for users to post and exchange opinions and information in certain areas of the website. Velvet Venue does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of Velvet Venue, its agents, and/or affiliates. Comments reflect the views and opinions of the person who posts their views and opinions.
+                    Velvet Venue reserves the right to monitor all Comments and to remove any Comments which can be considered inappropriate, offensive, or causes breach of these Terms and Conditions.</p>
+                <button id="acceptTerms">Accept</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Existing validation functions
+        function validateFirstName() {
+            var fnameInput = document.getElementById("fname");
+            var fnameError = document.getElementById("fname-error");
+            var nameRegex = /^[a-zA-Z\s]+$/;
+
+            if (!fnameInput.value.trim()) {
+                fnameError.textContent = "First Name is required";
+            } else if (!nameRegex.test(fnameInput.value.trim())) {
+                fnameError.textContent = "Invalid First Name";
+            } else {
+                fnameError.textContent = "";
+            }
+        }
+
+        function validateEmail() {
+            var emailInput = document.getElementById("email");
+            var emailError = document.getElementById("email-error");
+            var emailRegex = /^[A-Za-z_]{3,}@[A-Za-z]{3,}\.[A-Za-z]{2,}$/;
+
+            if (!emailInput.value.trim()) {
+                emailError.textContent = "Email is required";
+            } else if (!emailRegex.test(emailInput.value.trim())) {
+                emailError.textContent = "Invalid Email";
+            } else {
+                emailError.textContent = "";
+            }
+        }
+
+        function validateForm(event) {
+            event.preventDefault(); 
+
+            validateFirstName();
+            validateEmail();
+
+            var errorMessages = document.querySelectorAll(".error-message");
+            var isValid = true;
+
+            errorMessages.forEach(function(error) {
+                if (error.textContent !== "") {
+                    isValid = false;
+                }
+            });
+
+            if (isValid) {
+                document.getElementById('termsPopup').style.display = 'block';
+            } else {
+                alert("Please fill out all required fields correctly.");
+            }
+        }
+
+        // Popup logic
+        const termsPopup = document.getElementById('termsPopup');
+        const closePopup = document.querySelector('.close');
+        const acceptTerms = document.getElementById('acceptTerms');
+
+        closePopup.addEventListener('click', function() {
+            termsPopup.style.display = 'none';
+        });
+
+        window.addEventListener('click', function(event) {
+            if (event.target === termsPopup) {
+                termsPopup.style.display = 'none';
+            }
+        });
+
+        acceptTerms.addEventListener('click', function() {
+            termsPopup.style.display = 'none';
+            alert('Form successfully submitted!');
+            document.getElementById('contactForm').reset(); // Clear the form
+        });
+    </script>
+</body>
+</html>
